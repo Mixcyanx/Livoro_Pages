@@ -18,7 +18,7 @@ export default function BackgroundVideo() {
           onError={() => setVideoError(true)}
           className="w-full h-full object-cover scale-105"
         >
-          <source src="/assets/video/5_min_Background.mp4" type="video/mp4" />
+          <source src="https://github.com/Mixcyanx/Livoro-Game-Laucher-/raw/main/assets/video/5_min_Background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       ) : (
