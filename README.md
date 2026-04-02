@@ -75,10 +75,22 @@ git push
    firebase deploy
    ```
 
-### 5. GitHub Pages 注意事項
-如果您的 GitHub Pages 網址包含子路徑（例如 `https://<username>.github.io/<repo-name>/`），請確保 `vite.config.ts` 中的 `base` 設定正確。
-目前專案已設定為 `base: './'`（相對路徑），這在大多數情況下都能正常運作。
-如果頁面依然顯示空白，請將 `base` 修改為您的儲存庫名稱，例如：`base: '/Livoro_Pages/'`。
+### 6. 解決 GitHub Pages 空白頁面 (重要)
+如果您在 GitHub Pages 看到空白頁面，通常是因為瀏覽器無法執行原始的 `.tsx` 檔案。您必須先「編譯 (Build)」專案。
+
+我已經為您建立了自動化部署流程 (`.github/workflows/deploy.yml`)，請按照以下步驟啟用：
+
+1. **推送程式碼**：將目前的變更推送到 GitHub。
+2. **設定 GitHub Pages 來源**：
+   - 前往您的 GitHub 儲存庫頁面。
+   - 點擊 **Settings** (設定) -> **Pages**。
+   - 在 **Build and deployment** -> **Source** 下，將選項從 "Deploy from a branch" 改為 **"GitHub Actions"**。
+3. **查看進度**：
+   - 點擊儲存庫上方的 **Actions** 頁籤。
+   - 您會看到一個名為 "Deploy static content to Pages" 的工作正在執行。
+   - 等待它完成（變成綠色勾勾）後，您的網頁就會正常顯示了！
+
+目前專案已在 `vite.config.ts` 設定 `base: './'`，這能確保資源路徑正確。
 
 ---
 *LIVORO - 重新定義智慧復健體驗*
