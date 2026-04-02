@@ -75,9 +75,10 @@ git push
    firebase deploy
    ```
 
-### 4. GitHub 自動部署 (CI/CD)
-- **Firebase Hosting 整合**：在 `firebase init` 過程中選擇 GitHub 整合，它會自動在您的 Repo 建立 Actions。
-- **Firebase App Hosting**：適用於更複雜的動態框架，可直接在 Firebase Console 連結 GitHub Repo。
+### 5. GitHub Pages 注意事項
+如果您的 GitHub Pages 網址包含子路徑（例如 `https://<username>.github.io/<repo-name>/`），請確保 `vite.config.ts` 中的 `base` 設定正確。
+目前專案已設定為 `base: './'`（相對路徑），這在大多數情況下都能正常運作。
+如果頁面依然顯示空白，請將 `base` 修改為您的儲存庫名稱，例如：`base: '/Livoro_Pages/'`。
 
 ---
 *LIVORO - 重新定義智慧復健體驗*
