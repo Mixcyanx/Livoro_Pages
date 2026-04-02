@@ -18,12 +18,15 @@ const GameCard: React.FC<GameCardProps> = ({ game, index }) => {
       className="glass-card overflow-hidden group cursor-pointer border-neon-blue/20 hover:border-neon-blue/50 transition-colors duration-500"
     >
       <div className="relative h-48 overflow-hidden">
-        <img 
-          src={game.image} 
-          alt={game.title}
-          referrerPolicy="no-referrer"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-        />
+        >
+          <source src={game.video} type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
       </div>
       

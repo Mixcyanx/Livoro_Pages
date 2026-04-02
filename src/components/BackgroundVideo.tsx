@@ -18,8 +18,7 @@ export default function BackgroundVideo() {
           onError={() => setVideoError(true)}
           className="w-full h-full object-cover scale-105"
         >
-          {/* Placeholder video URL - in real project user should put their own file in public/assets/video/ */}
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-dark-blue-background-4464-large.mp4" type="video/mp4" />
+          <source src="https://github.com/Mixcyanx/Livoro_Pages/raw/main/assets/video/5_min_Background.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       ) : (

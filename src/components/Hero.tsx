@@ -19,13 +19,16 @@ export default function Hero() {
           重新定義訓練，讓進步看得見。
         </p>
         
-        <motion.button
+        <motion.a
+          href="https://github.com/Mixcyanx/Livoro-Game-Laucher-/releases/download/v1.0.0.0/Livoro.exe"
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(0, 210, 255, 0.5)" }}
           whileTap={{ scale: 0.95 }}
-          className="px-10 py-4 bg-transparent border-2 border-neon-blue text-neon-blue font-bold rounded-full transition-all duration-300 hover:bg-neon-blue hover:text-black"
+          className="inline-block px-10 py-4 bg-transparent border-2 border-neon-blue text-neon-blue font-bold rounded-full transition-all duration-300 hover:bg-neon-blue hover:text-black"
         >
-          立即體驗
-        </motion.button>
+          立即下載體驗
+        </motion.a>
       </motion.div>
     </section>
   );
